@@ -23,11 +23,7 @@ function handleDeviceOrientation(e) {
   // console.log('gamma: ' + e.gamma);
   document.querySelector('p#tiltAngle').innerHTML = 'Tilt angle: ' + e.gamma + 'deg.';
   
-  var transform = 'rotate(' + e.gamma + 'deg) rotate3d(1, 0, 0, ' +
-      e.beta + 'deg)';
-  var translate = 'translate(' + Math.floor(e.gamma / 90) * imageElement.style.width + 'px, 0px);';
-  imageElement.style.webkitTransform = translate;
-  imageElement.style.transform = translate;
+  imageElement.scrollLeft += Math.floor(e.gamma / 90) * imageElement.style.width;
 }
 
 if (window.DeviceOrientationEvent) {
