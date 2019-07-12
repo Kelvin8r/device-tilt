@@ -20,7 +20,7 @@ var imageElement = document.getElementById('orientee');
 
 function handleDeviceOrientation(e) {
   // console.log('gamma: ' + e.gamma);
-  document.querySelector('p#isAvailable').innerHTML = 'Tilt angle: ' + e.gamma + 'deg.';
+  document.querySelector('p#tiltAngle').innerHTML = 'Tilt angle: ' + e.gamma + 'deg.';
   
   var transform = 'rotate(' + e.gamma + 'deg) rotate3d(1, 0, 0, ' +
       e.beta + 'deg)';
