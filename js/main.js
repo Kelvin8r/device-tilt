@@ -17,14 +17,13 @@ limitations under the License.
 'use strict';
 
 var imageElement = document.getElementById('orientee');
-imageElement.scrollLeft = imageElement.style.width / 2 - 320;
 
 function handleDeviceOrientation(e) {
   // console.log('gamma: ' + e.gamma);
   document.querySelector('p#isAvailable').innerHTML = 'angle: ' + e.gamma + 'deg.';
-  document.querySelector('p#tiltAngle').innerHTML = 'scroll: ' + e.gamma / 180 + 'px.';
+  document.querySelector('p#tiltAngle').innerHTML = 'scroll: ' + e.gamma / 180 * imageElement.clientWidth + 'px.';
   
-  imageElement.scrollLeft += (e.gamma / 180) * imageElement.style.width;
+  // imageElement.scrollLeft += (e.gamma / 180) * imageElement.style.width;
 }
 
 if (window.DeviceOrientationEvent) {
