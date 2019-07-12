@@ -17,6 +17,7 @@ limitations under the License.
 'use strict';
 
 var imageElement = document.getElementById('orientee');
+imageElement.scrollLeft = imageElement.style.width / 2 - 320;
 
 function handleDeviceOrientation(e) {
   // console.log('gamma: ' + e.gamma);
@@ -24,7 +25,7 @@ function handleDeviceOrientation(e) {
   
   var transform = 'rotate(' + e.gamma + 'deg) rotate3d(1, 0, 0, ' +
       e.beta + 'deg)';
-  var translate = 'translate(' + e.gamma / 90 * imageElement.style.width + 'px, 0px);';
+  var translate = 'translate(' + Math.floor(e.gamma / 90) * imageElement.style.width + 'px, 0px);';
   imageElement.style.webkitTransform = translate;
   imageElement.style.transform = translate;
 }
