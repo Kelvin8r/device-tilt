@@ -21,7 +21,7 @@ imageElement.scrollLeft = imageElement.style.width / 2 - 320;
 
 function handleDeviceOrientation(e) {
   // console.log('gamma: ' + e.gamma);
-  document.querySelector('p#tiltAngle').innerHTML = 'Tilt angle: ' + e.gamma + 'deg.';
+  document.querySelector('p#tiltAngle').innerHTML = 'scroll: ' + Math.floor(e.gamma / 90) * imageElement.style.width + 'px.';
   
   imageElement.scrollLeft += Math.floor(e.gamma / 90) * imageElement.style.width;
 }
