@@ -23,7 +23,7 @@ function handleDeviceOrientation(e) {
   
   var transform = 'rotate(' + e.gamma + 'deg) rotate3d(1, 0, 0, ' +
       e.beta + 'deg)';
-  var translate = 'translate(' + e.gamma + 'px, 0px);';
+  var translate = 'translate(' + e.gamma / 90 * imageElement.style.width + 'px, 0px);';
   imageElement.style.webkitTransform = translate;
   imageElement.style.transform = translate;
 }
