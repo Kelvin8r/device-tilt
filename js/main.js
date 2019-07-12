@@ -19,7 +19,8 @@ limitations under the License.
 var imageElement = document.getElementById('orientee');
 
 function handleDeviceOrientation(e) {
-  console.log('gamma: ' + e.gamma);
+  // console.log('gamma: ' + e.gamma);
+  document.querySelector('p#isAvailable').innerHTML = 'Tilt angle: ' + e.gamma + 'deg.';
   
   var transform = 'rotate(' + e.gamma + 'deg) rotate3d(1, 0, 0, ' +
       e.beta + 'deg)';
@@ -31,6 +32,5 @@ function handleDeviceOrientation(e) {
 if (window.DeviceOrientationEvent) {
   window.ondeviceorientation = handleDeviceOrientation;
 } else {
-  document.querySelector('p#isAvailable').innerHTML =
-      'Device Orientation is not available.';
+  document.querySelector('p#isAvailable').innerHTML = 'Device Orientation is not available.';
 }
