@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<!--
+Copyright 2017 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta id="theme-color" name="theme-color" content="#fff">
+
+<base target="_blank">
+
+<title>Device Orientation</title>
+
+<link rel="stylesheet" href="css/main.css">
+
+<style>
+.panorama {
+  height: 400px;
+  margin-bottom: 1.5rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  left: 50%;
+  width: 100%;
+}
+
+.panorama img {
+  max-width: none;
+  height: 100%;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="container">
+<h1>Device Orientation</h1>
+
+  <p id="isAvailable"></p>
+  <p>Tilting and rotating your laptop or device will transform the following image if Device Orientation is available.</p>
+  <div class="panorama">
+    <img src="images/p2.jpg" alt="Panorama" id="orientee" />
+  </div>
+  <script src="js/main.js"></script>
+
+  <a href="https://github.com/samdutton/simpl/blob/gh-pages/deviceorientation" title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
+
+</div>
+
+</body>
+</html>
